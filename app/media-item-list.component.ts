@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['app/media-item-list.component.css']
 })
 export class MediaItemListComponent {
+  media = null;
+  onPreview(mediaItem){
+    this.media = mediaItem;
+  }
+
+  closePopUp(){
+    this.media = null;
+    console.log("hide");
+  }
   onMediaItemDelete(mediaItem) { }
 
   mediaItems = [
