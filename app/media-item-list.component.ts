@@ -25,7 +25,8 @@ export class MediaItemListComponent {
       category: "Science Fiction",
       year: 2010,
       watchedOn: 1294166565384,
-      isFavorite: false
+      isFavorite: false,
+      imageURL : ["./media/firebug_back.png","./media/Firebug_logo.png"]
     },
     {
       id: 2,

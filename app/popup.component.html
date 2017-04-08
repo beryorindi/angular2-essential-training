@@ -1,9 +1,13 @@
 <div class="popup">
-  <button (click)="closePreview()">x</button>
+  <div class="popup-content">
+  <span (click)="closePreview()" class="close">&times;</span>
   <p>Selected MediaItem Preview</p>
-  <img *ngFor="let imageURL of mediaItems" src="{{imageURL}}" >
+  <span (click)=btnPrev() class="prev"><</span>
+    <img *ngFor="let image of images" [mwImage]="image.visibility"  src="{{image.path}}" class="image">
+  <span (click)=btnNext() class="prev">></span>
   <p>Name: {{mediaItem? mediaItem.name: ''}}</p>
   <p>Category: {{mediaItem? mediaItem.category : ''}}</p>
   <p>Year: {{mediaItem? mediaItem.year : ''}}</p>
   <p>{{mediaItem? mediaItem.watchedOn : ''}}</p>
+  </div>
 </div>
