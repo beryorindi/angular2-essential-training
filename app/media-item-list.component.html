@@ -5,5 +5,5 @@
     [mediaItem]="mediaItem"
     (delete)="onMediaItemDelete($event)"
     (preview)="onPreview($event)"></mw-media-item>
-    <mw-popup></mw-popup>
+    <mw-popup [mediaItem]="media" *ngIf="media" (preview)="closePopUp()"></mw-popup>
 </section>
