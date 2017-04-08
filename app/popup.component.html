@@ -1,0 +1,9 @@
+<div class="popup">
+  <button (click)="closePreview()">x</button>
+  <p>Selected MediaItem Preview</p>
+  <img *ngFor="let imageURL of mediaItems" src="{{imageURL}}" >
+  <p>Name: {{mediaItem? mediaItem.name: ''}}</p>
+  <p>Category: {{mediaItem? mediaItem.category : ''}}</p>
+  <p>Year: {{mediaItem? mediaItem.year : ''}}</p>
+  <p>{{mediaItem? mediaItem.watchedOn : ''}}</p>
+</div>

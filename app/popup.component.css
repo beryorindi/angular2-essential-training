@@ -1,0 +1,10 @@
+/* Popup container - can be anything you want */
+.popup {
+    width : 40%;
+    margin : auto;
+    background-color: white;
+}
+
+.popup button{
+      float: right;
+}
