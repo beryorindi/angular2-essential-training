@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { GuitarItemComponent } from './guitar-item.component';
 import { GuitarItemListComponent } from './guitar-item-list.component';
 import { GuitarItemPopupComponent } from './guitar-item-popup.component';
+import { ItemFormComponent } from './item-form.component';
+import { ItemService } from './item.service';
+import { lookupListToken, lookupLists } from './providers';
 //import { routing } from './app.routing';
 
 @NgModule({
@@ -20,10 +23,12 @@ import { GuitarItemPopupComponent } from './guitar-item-popup.component';
     AppComponent,
     GuitarItemComponent,
     GuitarItemListComponent,
-    GuitarItemPopupComponent
+    GuitarItemPopupComponent,
+    ItemFormComponent
   ],
   providers : [
-    
+    ItemService,
+    {provide : lookupListToken, useValue: lookupLists}
   ],
   bootstrap:[
     AppComponent

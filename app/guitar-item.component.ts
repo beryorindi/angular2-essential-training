@@ -12,10 +12,11 @@ export class GuitarItemComponent {
 
   onDelete() {
     this.delete.emit(this.guitarItem);
+    console.log("delete");
   }
 
    onPreview(){
     this.preview.emit(this.guitarItem);
-    console.log("preview");
+    //console.log("preview");
   }
 }

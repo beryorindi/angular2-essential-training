@@ -1,0 +1,38 @@
+<header>
+  <h2>Add Guitar to Catalog</h2>
+</header>
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
+  <ul>
+    <li>
+      <label for="category">Category</label>
+      <select name="category" id="category" formControlName="category">
+        <option value="Acoustic">Acoustic</option>
+        <option value="Classical Nylon">Classical Nylon</option>
+        <option value="Electric">Electric</option>
+      </select>
+    </li>
+    <li>
+      <label for="subcategory">Sub Category</label>
+      <select name="subcategory" id="subcategory" formControlName="subcategory">
+        <option value="Acoustic">Acoustic</option>
+      </select>
+    </li>
+    <li>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" formControlName="name">
+      <div *ngIf="form.controls.name.errors?.pattern" class="error">
+        Name has invalid characters
+      </div>
+    </li>
+    <li>
+      <label for="price">Price</label>
+      <input type="number" name="price" id="price" formControlName="price">
+      <div *ngIf="form.controls.price.errors?.pattern" class="error">
+        Price cannot be negative or 0
+      </div>
+    </li>
+  </ul>
+  <button type="submit" [disabled]="!form.valid">Save</button>
+</form>
