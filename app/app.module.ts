@@ -4,7 +4,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, XHRBackend } from '@angular/http';
 
 import { AppComponent } from './app.component';
-
+import { GuitarItemComponent } from './guitar-item.component';
+import { GuitarItemListComponent } from './guitar-item-list.component';
+import { GuitarItemPopupComponent } from './guitar-item-popup.component';
 //import { routing } from './app.routing';
 
 @NgModule({
@@ -16,7 +18,9 @@ import { AppComponent } from './app.component';
   ],
   declarations : [
     AppComponent,
-
+    GuitarItemComponent,
+    GuitarItemListComponent,
+    GuitarItemPopupComponent
   ],
   providers : [
     

@@ -1,0 +1,10 @@
+<div class="popup">
+  <div class="popup-content">
+  <span (click)="closePreview()" class="close">&times;</span>
+  <p>Name: {{guitarItem? guitarItem.name: ''}}</p>
+  <span (click)=btnPrev() class="prev"><</span>
+    <!--<img *ngFor="let image of {{ guitarItem.image}}" [ygImage]="image.visibility"  src="{{image[0].path}}" class="image">-->
+  <span (click)=btnNext() class="prev">></span>
+  <p>Sub Category: {{guitarItem? guitarItem.subcategory : ''}}</p>
+  </div>
+</div>

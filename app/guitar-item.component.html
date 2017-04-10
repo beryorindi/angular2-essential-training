@@ -1,0 +1,13 @@
+<h2>{{ guitarItem.name }}</h2>
+<div><img src="{{ guitarItem.image[0].path }}"></div>
+<div>{{ guitarItem.subcategory }}</div>
+<div>{{ guitarItem.category }}</div>
+
+<div class="tools">
+  <a class="delete" (click)="onDelete()">
+    remove
+  </a>
+  <a class="details" (click)="onPreview()">
+    view
+  </a>
+</div>
