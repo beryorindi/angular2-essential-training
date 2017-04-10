@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['app/guitar-item-list.component.css']
 })
 export class GuitarItemListComponent {
+
   media = null;
   onPreview(guitarItem){
     this.media = guitarItem;
@@ -14,7 +15,9 @@ export class GuitarItemListComponent {
   closePopUp(){
     this.media = null;
   }
-  onMediaItemDelete(mediaItem) { }
+  onMediaItemDelete(mediaItem) { 
+  
+  }
 
   guitarItems = [
     {

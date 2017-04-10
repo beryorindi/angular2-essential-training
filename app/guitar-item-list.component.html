@@ -2,6 +2,7 @@
   <yg-guitar-item
     *ngFor="let guitarItem of guitarItems"
     [guitarItem]="guitarItem"
+    (delete)="onMediaItemDelete($event)"
     (preview)="onPreview($event)"></yg-guitar-item>
     <guitar-item-popup [guitarItem]="media" *ngIf="media" (preview)="closePopUp()"></guitar-item-popup>
 </section>

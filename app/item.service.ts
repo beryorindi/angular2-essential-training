@@ -21,7 +21,8 @@ export class ItemService {
       subcategory: "APX Series",
       category: "Acoustic Guitar",
       image : [{path : "./media/apx.jpg", visibility:true}, {path: "./media/apx.jpg", visibility : false}],
-      isFavorite: false
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
    {
       id: 2,
@@ -29,7 +30,8 @@ export class ItemService {
       subcategory: "CPX Series",
       category: "Acoustic Guitar",
       image : [{path : "./media/cpx.jpg", visibility:true}, {path: "./media/cpx.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 3,
@@ -37,7 +39,8 @@ export class ItemService {
       subcategory: "CGX Series",
       category: "Classical Nylon Guitar",
       image : [{path : "./media/cgx.jpg", visibility:true}, {path: "./media/cgx.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 4,
@@ -45,7 +48,8 @@ export class ItemService {
       subcategory: "NX Series",
       category: "Classical Nylon Guitar",
       image : [{path : "./media/nx.jpg", visibility:true}, {path: "./media/nx.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 5,
@@ -53,7 +57,8 @@ export class ItemService {
       subcategory: "RGX Series",
       category: "Electric Guitar",
       image : [{path : "./media/rgx.jpg", visibility:true}, {path: "./media/rgx.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 6,
@@ -61,7 +66,8 @@ export class ItemService {
       subcategory: "Pacifica Series ",
       category: "Electric Guitar",
       image : [{path : "./media/pacifica.jpg", visibility:true}, {path: "./media/pacifica.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 7,
@@ -69,7 +75,8 @@ export class ItemService {
       subcategory: "APX Series",
       category: "Acoustic Guitar",
       image : [{path : "./media/apx.jpg", visibility:true}, {path: "./media/apx.jpg", visibility : false}],
-      isFavorite: false
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
    {
       id: 8,
@@ -77,7 +84,8 @@ export class ItemService {
       subcategory: "CPX Series",
       category: "Acoustic Guitar",
       image : [{path : "./media/cpx.jpg", visibility:true}, {path: "./media/cpx.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 9,
@@ -85,7 +93,8 @@ export class ItemService {
       subcategory: "CGX Series",
       category: "Classical Nylon Guitar",
       image : [{path : "./media/cgx.jpg", visibility:true}, {path: "./media/cgx.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 10,
@@ -93,7 +102,8 @@ export class ItemService {
       subcategory: "NX Series",
       category: "Classical Nylon Guitar",
       image : [{path : "./media/nx.jpg", visibility:true}, {path: "./media/nx.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 11,
@@ -101,7 +111,8 @@ export class ItemService {
       subcategory: "RGX Series",
       category: "Electric Guitar",
       image : [{path : "./media/rgx.jpg", visibility:true}, {path: "./media/rgx.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     },
     {
       id: 12,
@@ -109,6 +120,8 @@ export class ItemService {
       subcategory: "Pacifica Series ",
       category: "Electric Guitar",
       image : [{path : "./media/pacifica.jpg", visibility:true}, {path: "./media/pacifica.jpg", visibility : false}],
-      isFavorite: false,
+      description : "This guitar made from great mahoni with great nylon ",
+      price : "2000000"
     }
   ];
+}
