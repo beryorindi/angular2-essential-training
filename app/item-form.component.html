@@ -33,6 +33,10 @@
         Price cannot be negative or 0
       </div>
     </li>
+    <li>
+      <label for="description">Description</label>
+      <textarea rows="5" cols="10" name="description" id="description" formControlName="description"></textarea>
+    </li>
   </ul>
   <button type="submit" [disabled]="!form.valid">Save</button>
 </form>

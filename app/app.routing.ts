@@ -5,7 +5,7 @@ import { GuitarItemListComponent } from './guitar-item-list.component';
 
 const appRoutes: Routes = [
   { path: 'add', component: ItemFormComponent },
-  { path: ':medium', component: GuitarItemListComponent },
+  { path: ':category', component: GuitarItemListComponent },
   { path: '', pathMatch: 'full', redirectTo: 'list' }
 ];
 

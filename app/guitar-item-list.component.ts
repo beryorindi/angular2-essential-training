@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { ItemService } from './item.service'
+
 @Component({
   selector: 'yg-guitar-item-list',
   templateUrl: 'app/guitar-item-list.component.html',
@@ -7,7 +9,15 @@ import { Component } from '@angular/core';
 })
 export class GuitarItemListComponent {
 
+  guitarItems = [];
+  category = '';
   media = null;
+
+
+  constructor (private itemService: ItemService){}
+  ngOnInit() {
+    this.getGuitarItems(this.category);
+  }
   onPreview(guitarItem){
     this.media = guitarItem;
   }
@@ -15,106 +25,20 @@ export class GuitarItemListComponent {
   closePopUp(){
     this.media = null;
   }
-  onMediaItemDelete(mediaItem) { 
-  
+  onMediaItemDelete(guitarItem) { 
+    this.itemService.delete(guitarItem)
+    .subscribe(() => {
+      this.getGuitarItems(this.category);
+    });
   }
 
-  guitarItems = [
-    {
-      id: 1,
-      name: "APX 123",
-      subcategory: "APX Series",
-      category: "Acoustic Guitar",
-      image : [{path : "./media/apx.jpg", visibility:true}, {path: "./media/apx.jpg", visibility : false}],
-      isFavorite: false
-    },
-   {
-      id: 2,
-      name: "CPX 123",
-      subcategory: "CPX Series",
-      category: "Acoustic Guitar",
-      image : [{path : "./media/cpx.jpg", visibility:true}, {path: "./media/cpx.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 3,
-      name: "CGX 123",
-      subcategory: "CGX Series",
-      category: "Classical Nylon Guitar",
-      image : [{path : "./media/cgx.jpg", visibility:true}, {path: "./media/cgx.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 4,
-      name: "NX 123",
-      subcategory: "NX Series",
-      category: "Classical Nylon Guitar",
-      image : [{path : "./media/nx.jpg", visibility:true}, {path: "./media/nx.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 5,
-      name : "RGX 123",
-      subcategory: "RGX Series",
-      category: "Electric Guitar",
-      image : [{path : "./media/rgx.jpg", visibility:true}, {path: "./media/rgx.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 6,
-      name : "Pacifica 123",
-      subcategory: "Pacifica Series ",
-      category: "Electric Guitar",
-      image : [{path : "./media/pacifica.jpg", visibility:true}, {path: "./media/pacifica.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 7,
-      name: "APX 123",
-      subcategory: "APX Series",
-      category: "Acoustic Guitar",
-      image : [{path : "./media/apx.jpg", visibility:true}, {path: "./media/apx.jpg", visibility : false}],
-      isFavorite: false
-    },
-   {
-      id: 8,
-      name: "CPX 123",
-      subcategory: "CPX Series",
-      category: "Acoustic Guitar",
-      image : [{path : "./media/cpx.jpg", visibility:true}, {path: "./media/cpx.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 9,
-      name: "CGX 123",
-      subcategory: "CGX Series",
-      category: "Classical Nylon Guitar",
-      image : [{path : "./media/cgx.jpg", visibility:true}, {path: "./media/cgx.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 10,
-      name: "NX 123",
-      subcategory: "NX Series",
-      category: "Classical Nylon Guitar",
-      image : [{path : "./media/nx.jpg", visibility:true}, {path: "./media/nx.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 11,
-      name : "RGX 123",
-      subcategory: "RGX Series",
-      category: "Electric Guitar",
-      image : [{path : "./media/rgx.jpg", visibility:true}, {path: "./media/rgx.jpg", visibility : false}],
-      isFavorite: false,
-    },
-    {
-      id: 12,
-      name : "Pacifica 123",
-      subcategory: "Pacifica Series ",
-      category: "Electric Guitar",
-      image : [{path : "./media/pacifica.jpg", visibility:true}, {path: "./media/pacifica.jpg", visibility : false}],
-      isFavorite: false,
-    }
-  ];
+  getGuitarItems(category){
+    this.category = category;
+    this.itemService.get(category)
+    .subscribe(guitarItems => {
+      this.guitarItems = guitarItems;
+    });
+  }
+
+  
 }

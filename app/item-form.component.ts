@@ -29,11 +29,13 @@ export class ItemFormComponent {
         Validators.required,
         Validators.pattern('^[0-9]*$')
       ])),
-      subcategory: this.formBuilder.control('', )
+      subcategory: this.formBuilder.control('', ),
+      description: this.formBuilder.control('', )
     });
   }
 
   onSubmit(guitarItem) {
-    this.itemService.add(guitarItem);
+    this.itemService.add(guitarItem)
+    .subscribe();
   }
 }

@@ -10,6 +10,7 @@ import { GuitarItemPopupComponent } from './guitar-item-popup.component';
 import { ItemFormComponent } from './item-form.component';
 import { ItemService } from './item.service';
 import { lookupListToken, lookupLists } from './providers';
+import { MockXHRBackend } from './mock-xhr-backend';
 //import { routing } from './app.routing';
 
 @NgModule({
@@ -28,7 +29,8 @@ import { lookupListToken, lookupLists } from './providers';
   ],
   providers : [
     ItemService,
-    {provide : lookupListToken, useValue: lookupLists}
+    {provide : lookupListToken, useValue: lookupLists},
+    {provide : XHRBackend, useClass: MockXHRBackend}
   ],
   bootstrap:[
     AppComponent

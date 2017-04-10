@@ -5,6 +5,8 @@
   <span (click)=btnPrev() class="prev"><</span>
     <!--<img *ngFor="let image of {{ guitarItem.image}}" [ygImage]="image.visibility"  src="{{image[0].path}}" class="image">-->
   <span (click)=btnNext() class="prev">></span>
-  <p>Sub Category: {{guitarItem? guitarItem.subcategory : ''}}</p>
+  <p>Sub Category: {{ guitarItem? guitarItem.subcategory : ''}}</p>
+  <p>Price: {{ guitarItem? guitarItem.price : ''}}</p>
+  <p>Description: {{ guitarItem? guitarItem.description : ''}}</p>
   </div>
 </div>
